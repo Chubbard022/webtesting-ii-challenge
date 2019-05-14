@@ -24,6 +24,7 @@ class Dashboard extends React.Component{
             this.setState({strikes: resetStrikes, balls: resetBalls  })
         }
     }
+
     updateBalls = (event) =>{
         event.preventDefault()
 
@@ -37,8 +38,20 @@ class Dashboard extends React.Component{
             this.setState({strikes: resetStrikes, balls: resetBalls  })
         }        
     }
+
     updateFouls = (event) =>{
         event.preventDefault()
+        let updateStrikes = this.state.strikes +1;
+
+
+        if(this.state.strikes <2){
+            this.setState({strikes:updateStrikes})
+        }
+
+
+        //  With no strikes,a foul makes it 1 strike. 
+        // With 1 strike, a foul makes it 2 strikes.
+        // With two strikes a foul has no effect, count stays at 2 strikes.
     }
     updateHit = (event) =>{
         event.preventDefault()
