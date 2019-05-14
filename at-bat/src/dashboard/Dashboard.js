@@ -11,8 +11,15 @@ class Dashboard extends React.Component{
     }
     updateStrikes = (event) =>{
         event.preventDefault()
-        let newStrikes = this.state.strikes +1
-        this.setState({strikes: newStrikes})
+
+        let updateStrikes = this.state.strikes + 1
+        let resetStrikes = 0;
+
+        if(this.state.strikes < 3){
+            this.setState({strikes: updateStrikes})
+        }else{
+            this.setState({strikes: resetStrikes })
+        }
     }
     updateBalls = (event) =>{
         event.preventDefault()
@@ -24,9 +31,11 @@ class Dashboard extends React.Component{
         
     }
     updateFouls = (event) =>{
-
+        event.preventDefault()
     }
     updateHit = (event) =>{
+        event.preventDefault()
+
         
     }
     render(){
