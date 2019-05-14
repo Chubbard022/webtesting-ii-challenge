@@ -1,10 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Dashboard from "./dashboard/Dashboard"
+import Display from "./display/Display"
 
 function App() {
   return (
     <div className="App">
+    <Dashboard />
+    <Display />
     </div>
   );
 }
