@@ -9,11 +9,27 @@ class Dashboard extends React.Component{
             balls: 0
         }
     }
+    updateStrikes = (event) =>{
+        event.preventDefault()
+        let newStrikes = this.state.strikes +1
+        this.setState({strikes: newStrikes})
+    }
+    updateBalls = (event) =>{
+        event.preventDefault()
+
+        let newBalls = this.state.balls +1;
+
+        this.setState({balls: newBalls})
+        
+    }
     render(){
         return(
             <div>
-                hello from dashboard
+                <p>At Bat recorder</p>
                 <Display strikes={this.state.strikes} balls={this.state.balls} />
+                <button onClick={this.updateStrikes}>Update strikes</button>
+                <button onClick={this.updateBalls}>Update balls</button>
+
             </div>
         )
     }
