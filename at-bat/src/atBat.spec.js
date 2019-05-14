@@ -18,10 +18,11 @@ describe("<Display/> and <Dashboard/> within App.js", () => {
           
         const button = getByText(/Update strikes/i)
         fireEvent.click(button)
+        fireEvent.click(button)
         getByText(/strikes:2/i)
       });
 //------------------------------------------------------------------
-    it("should return balls increased by one",()=>{
+    it("should return balls increased to one",()=>{
         const {getByText} = render(<App/>)
         const button = getByText(/Update balls/i)
 
@@ -29,10 +30,11 @@ describe("<Display/> and <Dashboard/> within App.js", () => {
         getByText(/balls:1/i)
 
     })
-    it("should return balls increased by two",()=>{
+    it("should return balls increased to two",()=>{
         const {getByText} = render(<App/>)
         const button = getByText(/Update balls/i)
 
+        fireEvent.click(button)
         fireEvent.click(button)
         getByText(/balls:2/i)
     })
