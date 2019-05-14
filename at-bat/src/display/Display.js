@@ -1,11 +1,8 @@
 import React from "react"
 
 class Display extends React.Component{
-    constructor(){
-        super()
-        this.state = {
-
-        }
+    constructor(props){
+        super(props)
     }
     render(){
         return(
