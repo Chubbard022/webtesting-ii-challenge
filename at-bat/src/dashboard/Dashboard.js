@@ -43,11 +43,9 @@ class Dashboard extends React.Component{
         event.preventDefault()
         let updateStrikes = this.state.strikes +1;
 
-
         if(this.state.strikes <2){
             this.setState({strikes:updateStrikes})
         }
-
 
         //  With no strikes,a foul makes it 1 strike. 
         // With 1 strike, a foul makes it 2 strikes.
