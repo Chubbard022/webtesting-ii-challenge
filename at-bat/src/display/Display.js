@@ -10,7 +10,8 @@ class Display extends React.Component{
     render(){
         return(
             <div>
-                hello from Display
+                <h3>balls: {this.props.balls}</h3>
+                <h3>strikes: {this.props.strikes}</h3>
             </div>
         )
     }
