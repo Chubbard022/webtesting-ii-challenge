@@ -1,0 +1,11 @@
+{
+  "name": "webtesting-ii-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Chubbard022/webtesting-ii-challenge.git",
+  "author": "Chubbard022 <chubbard022@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.8.0"
+  }
+}
